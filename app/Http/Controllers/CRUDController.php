@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Crud;
+use Session;
 
 class CRUDController extends Controller
 {
@@ -18,6 +19,8 @@ class CRUDController extends Controller
 
         return view('crud.index', compact('cruds'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -43,6 +46,10 @@ class CRUDController extends Controller
             ]);
 
         $crud->save();
+
+        //store status message
+        $crud = Session::flash('success_msg', 'Task added successfully!');
+
         return redirect('/crud');
     }
 
@@ -82,6 +89,10 @@ class CRUDController extends Controller
         $crud->title = $request->get('title');
         $crud->post = $request->get('post');
         $crud->save();
+
+        //store status message
+        $crud = Session::flash('success_msg', 'Task updated successfully!');
+
         return redirect('/crud');
     }
 
@@ -96,6 +107,12 @@ class CRUDController extends Controller
         $crud = Crud::find($id);
         $crud->delete();
 
+        //store status message
+        $crud = Session::flash('success_msg', 'Task deleted successfully!');
+
+
         return redirect('/crud');
     }
+
+   
 }

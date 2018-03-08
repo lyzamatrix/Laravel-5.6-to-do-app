@@ -5,16 +5,16 @@
 	<form method="post" action="{{url('crud')}}">
 		<div class="form-group row">
 			{{csrf_field()}}
-			<label for="lgFormGroupInput" class="col-sm-2" col-form-label col-form-label-lg>Title</label>
+			<label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Title</label>
 				<div class="col-sm-8">
-					<input type="text" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="title" name="title">
+					<input type="text" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="Task title" name="title" required>
 				</div>
 		
 		</div>
 		<div class="form-group row">
-			<label for="smFormGroupInput" class="col-sm-2" col-form-label col-form-label-sm>Post</label>
+			<label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Task</label>
 				<div class="col-sm-10">
-					<textarea name="post" rows="8" cols="85"></textarea>
+					<textarea name="post" rows="8" cols="85" placeholder="Task Description" required></textarea>
 				</div>
 		</div>
 		<div class="form-group row">
