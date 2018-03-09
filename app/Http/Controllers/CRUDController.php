@@ -48,7 +48,7 @@ class CRUDController extends Controller
         $crud->save();
 
         //store status message
-        $crud = Session::flash('success_msg', 'Task added successfully!');
+        $crud = Session::flash('alert-success', 'Task added successfully!');
 
         return redirect('/crud');
     }
@@ -91,7 +91,7 @@ class CRUDController extends Controller
         $crud->save();
 
         //store status message
-        $crud = Session::flash('success_msg', 'Task updated successfully!');
+        $crud = Session::flash('alert-warning', 'Task updated successfully!');
 
         return redirect('/crud');
     }
@@ -108,7 +108,7 @@ class CRUDController extends Controller
         $crud->delete();
 
         //store status message
-        $crud = Session::flash('success_msg', 'Task deleted successfully!');
+        $crud = Session::flash('alert-danger', 'Task deleted successfully!');
 
 
         return redirect('/crud');

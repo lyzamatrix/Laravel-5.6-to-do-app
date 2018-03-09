@@ -6,9 +6,13 @@
   <div class="container">
     <div><h2>ToDo List App</h2></div>
     <table class="table table-striped">
-     @if(Session::has('success_msg'))
-        <div class="alert alert-success">{{ Session::get('success_msg') }}</div>
-        @endif
+    <div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+     @if(Session::has('alert-'.$msg))
+        <div class="alert alert-{{$msg}}">{{ Session::get('alert-'.$msg) }}</div>
+    @endif
+    @endforeach
+    </div>
     <thead>
       <tr>
         <th>ID</th>
