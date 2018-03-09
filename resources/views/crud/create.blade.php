@@ -14,12 +14,12 @@
 		<div class="form-group row">
 			<label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Task</label>
 				<div class="col-sm-10">
-					<textarea name="post" rows="8" cols="85" placeholder="Task Description" required></textarea>
+					<textarea name="post" rows="8" cols="85" placeholder="Task Description" class="form-control form-control-lg" required></textarea>
 				</div>
 		</div>
 		<div class="form-group row">
 				<div class="col-md-3"></div>
-					<input type="submit" class="btn btn-primary">
+					<input type="submit" class="btn btn-primary" class="form-control form-control-lg">
 		</div>		
 	</form>
 </div>

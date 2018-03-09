@@ -9,9 +9,10 @@
 
 		<title>CRUD Operations</title>
 		
-	
-
-		  <!-- Favicon -->
+	<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+    
+		<!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/favicon.jpg') }}">
 
     <!-- CSFR token for ajax call -->
